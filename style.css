@@ -12,14 +12,26 @@ body {
     box-sizing: border-box;
 }
 
-.container {
-    background-color: #ffffff; /* Blanco puro para el contenedor */
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-    animation: fadeIn 1s ease-out;
+.download-button {
+    display: inline-block; /* Mantenemos inline-block para permitir padding vertical */
+    background-color: #ff80ab; /* Rosado vibrante para el botón */
+    color: #ffffff;
+    padding: 18px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 0 auto 40px auto; /* Centra horizontalmente y añade margen inferior */
+    max-width: 90%; /* Limita el ancho máximo para que no se salga en pantallas muy anchas */
+    width: fit-content; /* Permite que el botón se ajuste a su contenido */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.download-button:hover {
+    background-color: #f06292; /* Un tono más oscuro al pasar el ratón */
+    transform: translateY(-3px);
 }
 
 @keyframes fadeIn {
@@ -136,8 +148,9 @@ footer {
         font-size: 1em;
     }
     .download-button {
-        width: 100%;
-        padding: 12px 25px;
-        font-size: 1.1em;
+        width: 90%; /* Hace que el botón ocupe el 90% del ancho del contenedor */
+        padding: 12px 25px; /* Reduce un poco el padding en móviles */
+        font-size: 1.1em; /* Ajusta el tamaño de la fuente */
+        /* margin: 0 auto 40px auto; No es necesario repetir, ya está en la regla general */
     }
 }
